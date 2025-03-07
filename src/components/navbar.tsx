@@ -14,7 +14,7 @@ export default function Navbar() {
           <span className="font-serif text-2xl font-bold tracking-tight text-pastel-purple">Portfolio</span>
         </div>
         <nav className="hidden md:flex gap-6">
-          {["Home", "Work", "About", "Contact"].map((item) => (
+          {["Home", "Work", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -36,7 +36,7 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 right-0 bg-white border-b border-pastel-purple/20 p-4 md:hidden">
             <nav className="flex flex-col gap-4">
-              {["Home", "Work", "About", "Contact"].map((item) => (
+              {["Home", "Work", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}

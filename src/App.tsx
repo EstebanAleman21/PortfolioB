@@ -6,6 +6,7 @@ import WorkShowcase from "../src/components/work-showcase"
 import Contact from "../src/components/contact"
 import Footer from "../src/components/footer"
 import Gallery from "../src/components/gallery"
+import ProjectDetail from "./components/project-detail"
 
 // Create a HomePage component to contain your current layout
 function HomePage() {
@@ -43,8 +44,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/gallery" element={<GalleryPage />} />
-            {/* Redirect any unmatched routes to home */}
             <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="/project/:id" element={<ProjectDetail />} />
           </Routes>
         </div>
       </ThemeProvider>

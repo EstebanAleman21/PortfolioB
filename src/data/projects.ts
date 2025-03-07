@@ -1,141 +1,220 @@
+import posterLabubu from "../assets/imagenes/PosterLabubu.png";
+import posterFerrari from "../assets/imagenes/PosterFerrari.png";
+import volanteComidasAli from "../assets/imagenes/VolanteComidasAli.png";
+import paletasCV from "../assets/imagenes/PaletasCV.png";
+import PaletasSanvalentin1 from "../assets/imagenes/PaletasSanValentin/1.png";
+import PaletasSanvalentin2 from "../assets/imagenes/PaletasSanValentin/2.png";
+import AlbumSanvalentin1_1 from "../assets/imagenes/AlbumPaniniSanValentin/1.png";
+import AlbumSanvalentin1_2 from "../assets/imagenes/AlbumPaniniSanValentin/2.png";
+import AlbumSanvalentin1_3 from "../assets/imagenes/AlbumPaniniSanValentin/3.png";
+import AlbumSanvalentin1_4 from "../assets/imagenes/AlbumPaniniSanValentin/4.png";
+import AlbumSanvalentin1_5 from "../assets/imagenes/AlbumPaniniSanValentin/5.png";
+import AlbumSanvalentin1_6 from "../assets/imagenes/AlbumPaniniSanValentin/6.png";
+import AlbumSanvalentin2_1 from "../assets/imagenes/AlbumPaniniSanValentin2/1.png";
+import AlbumSanvalentin2_2 from "../assets/imagenes/AlbumPaniniSanValentin2/2.png";
+import AlbumSanvalentin2_3 from "../assets/imagenes/AlbumPaniniSanValentin2/3.png";
+import AlbumSanvalentin2_4 from "../assets/imagenes/AlbumPaniniSanValentin2/4.png";
+import AlbumSanvalentin2_5 from "../assets/imagenes/AlbumPaniniSanValentin2/5.png";
+import AlbumSanvalentin2_6 from "../assets/imagenes/AlbumPaniniSanValentin2/6.png";
+import MenuMilPlatos1 from "../assets/imagenes/MenuMilPlatos/1.png";
+import MenuMilPlatos2 from "../assets/imagenes/MenuMilPlatos/2.png";
+import PlayerasNFL1 from "../assets/imagenes/PlayerasNFL/1.png";
+import PlayerasNFL2 from "../assets/imagenes/PlayerasNFL/2.png";
+import PostPerros1 from "../assets/imagenes/PostIGPerros/1.png";
+import PostPerros2 from "../assets/imagenes/PostIGPerros/2.png";
+import PostPerros3 from "../assets/imagenes/PostIGPerros/3.png";
+import PostPerros4 from "../assets/imagenes/PostIGPerros/4.png";
+import paradoja1 from "../assets/imagenes/PublicidadParadoja/1.png";
+import paradoja2 from "../assets/imagenes/PublicidadParadoja/2.png";
+import paradoja3 from "../assets/imagenes/PublicidadParadoja/3.png";
+
 // Define types for better type safety
 export interface Category {
     id: string;
     name: string;
-  }
+}
   
-  export interface Project {
+export interface Project {
     id: number;
     category: string;
     title: string;
     image: string;
-    description?: string; // Optional description for detail pages
-  }
+    images?: string[];  // Array of additional images for the carousel
+    description?: string;
+    client?: string;
+    year?: string;
+    services?: string[];
+}
   
-  // Categories for filtering
-  export const categories: Category[] = [
+// Categories for filtering
+export const categories: Category[] = [
     { id: "posters", name: "Posters" },
     { id: "menus", name: "Menus" },
     { id: "etiquetas", name: "Etiquetas" },
-  ];
+    { id: "regalos", name: "Regalos" },
+    { id: "digital", name: "Digital" },
+];
   
-  // Projects data
-  export const projects: Project[] = [
+// Projects data
+export const projects: Project[] = [
     // Posters category
     { 
       id: 1, 
       category: "posters", 
-      title: "Instagram Growth Strategy", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Estrategia de crecimiento para aumentar seguidores en Instagram mediante contenido visualmente atractivo."
+      title: "Ejemplo de publicidad Labubu", 
+      image: posterLabubu,
+      images: [],
+      description: "Campaña publicitaria para Labubu, con un diseño innovador que busca incrementar el reconocimiento de la marca y aumentar seguidores en Instagram a través de contenido visual creativo.",
+      client: "Labubu",
+      year: "2025",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Marketing Digital"]
     },
     { 
       id: 2, 
       category: "posters", 
-      title: "TikTok Content Series", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Serie de contenido viral para TikTok enfocada en tendencias actuales y engagement con audiencia joven."
+      title: "Ejemplo de publicidad Ferrari", 
+      image: posterFerrari,
+      images: [],
+      description: "Campaña exclusiva para Ferrari, resaltando la elegancia y sofisticación de la marca a través de un diseño minimalista y atractivo que refleja la esencia de los automóviles deportivos.",
+      client: "Ferrari",
+      year: "2025",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Marketing Digital"]
     },
-    { 
-      id: 3, 
-      category: "posters", 
-      title: "LinkedIn B2B Campaign", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Campaña B2B para LinkedIn diseñada para conectar profesionales y generar leads de alta calidad."
-    },
-    { 
-      id: 4, 
-      category: "posters", 
-      title: "Twitter Engagement Boost", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Estrategia para aumentar la interacción en Twitter mediante contenido relevante y conversaciones activas."
-    },
-  
     // Menus category
     { 
-      id: 5, 
+      id: 3, 
       category: "menus", 
-      title: "Startup Rebrand", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Rediseño completo de marca para startup tech emergente, incluyendo nuevos menús digitales interactivos."
+      title: "Volante de comidas Ali", 
+      image: volanteComidasAli,
+      images: [],
+      description: "Diseño de volante promocional para Comidas Ali, enfocado en destacar la oferta culinaria y atraer nuevos clientes mediante un estilo moderno y atractivo.",
+      client: "Comidas Ali",
+      year: "2024",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Marketing Digital", "Producto"]
+    },
+    // Etiquetas category
+    { 
+      id: 4, 
+      category: "etiquetas", 
+      title: "Etiquetas en paletas con QR de CV", 
+      image: paletasCV,
+      images: [],
+      description: "Diseño de etiquetas interactivas para paletas, integrando un código QR que ofrece acceso a contenido exclusivo y mejora la experiencia del reclutador.",
+      client: "N/A",
+      year: "2025",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Producto"]
     },
     { 
+      id: 5, 
+      category: "etiquetas", 
+      title: "Paletas de San Valentín", 
+      image: PaletasSanvalentin1,
+      images: [
+        PaletasSanvalentin1,
+        PaletasSanvalentin2
+      ],
+      description: "Campaña de diseño para paletas de San Valentín, con un estilo romántico y creativo que invita a celebrar el amor, complementado con un packaging innovador.",
+      client: "N/A",
+      year: "2025",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Producto"]
+    },
+    // Regalos category
+    { 
       id: 6, 
-      category: "menus", 
-      title: "Visual Identity System", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Sistema de identidad visual completo con menús personalizados para restaurante de alta cocina."
+      category: "regalos", 
+      title: "Álbum de fotos: San Valentín 1", 
+      image: AlbumSanvalentin1_1,
+      images: [
+        AlbumSanvalentin1_1,
+        AlbumSanvalentin1_2,
+        AlbumSanvalentin1_3,
+        AlbumSanvalentin1_4,
+        AlbumSanvalentin1_5,
+        AlbumSanvalentin1_6,
+      ],
+      description: "Creación de un álbum de fotos conmemorativo para San Valentín que captura momentos especiales a través de un diseño artístico y emotivo.",
+      client: "N/A",
+      year: "2025",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Producto", "Regalo"]
     },
     { 
       id: 7, 
-      category: "menus", 
-      title: "Brand Guidelines", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Directrices de marca detalladas y menús estacionales para cadena de cafeterías artesanales."
+      category: "regalos", 
+      title: "Álbum de fotos: San Valentín 2", 
+      image: AlbumSanvalentin2_1,
+      images: [
+        AlbumSanvalentin2_1,
+        AlbumSanvalentin2_2,
+        AlbumSanvalentin2_3,
+        AlbumSanvalentin2_4,
+        AlbumSanvalentin2_5,
+        AlbumSanvalentin2_6,
+      ],
+      description: "Diseño de un álbum de fotos para San Valentín, enfocado en transmitir emociones y conservar recuerdos inolvidables, ideal para un regalo especial.",
+      client: "N/A",
+      year: "2025",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Producto", "Regalo"]
     },
-  
-    // Etiquetas category
+    // Menus category
     { 
       id: 8, 
-      category: "etiquetas", 
-      title: "Product Launch", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Diseño de etiquetas premium para lanzamiento de línea de productos cosméticos naturales."
+      category: "menus", 
+      title: "Menú restaurante Mil Platos", 
+      image: MenuMilPlatos1,
+      images: [
+        MenuMilPlatos1,
+        MenuMilPlatos2
+      ],
+      description: "Diseño completo de menú para el Restaurante Mil Platos, resaltando una variedad de platos auténticos y creando una experiencia gastronómica memorable.",
+      client: "Restaurante Mil Platos",
+      year: "2025",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Producto"]
     },
+    // Regalos category
     { 
       id: 9, 
-      category: "etiquetas", 
-      title: "Holiday Promotion", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Etiquetas temáticas para promoción navideña de productos gourmet y artesanales."
+      category: "regalos", 
+      title: "Playeras NFL", 
+      image: PlayerasNFL1,
+      images: [
+        PlayerasNFL1,
+        PlayerasNFL2
+      ],
+      description: "Diseño exclusivo de playeras inspiradas en la NFL, combinando elementos deportivos y gráficos modernos para los aficionados del fútbol americano.",
+      client: "N/A",
+      year: "2025",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Producto", "Regalo"]
     },
+    // Digital category
     { 
       id: 10, 
-      category: "etiquetas", 
-      title: "Awareness Campaign", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Campaña de concientización con etiquetas eco-friendly para marca de productos sostenibles."
+      category: "digital", 
+      title: "Post IG: Perros", 
+      image: PostPerros1,
+      images: [
+        PostPerros1,
+        PostPerros2,
+        PostPerros3,
+        PostPerros4,
+      ],
+      description: "Creación de contenido digital para Instagram enfocado en perros, con imágenes dinámicas y atractivas que capturan la ternura y energía de las mascotas.",
+      client: "Cuenta de Instagram para perros",
+      year: "2025",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Producto"]
     },
     { 
       id: 11, 
-      category: "etiquetas", 
-      title: "Wine Collection", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Colección de etiquetas premium para bodega boutique con enfoque en diseño minimalista."
+      category: "digital", 
+      title: "Publicidad de restaurante Paradoja", 
+      image: paradoja1,
+      images: [
+        paradoja1,
+        paradoja2,
+        paradoja3,
+      ],
+      description: "Campaña digital para Paradoja, fusionando conceptos creativos y visuales impactantes para captar la atención en redes sociales y resaltar la identidad única de la marca.",
+      client: "Paradoja",
+      year: "2025",
+      services: ["Diseño Gráfico", "Estrategia de Contenido", "Producto"]
     },
-    { 
-      id: 12, 
-      category: "etiquetas", 
-      title: "Craft Beer Series", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Serie de etiquetas artísticas para cervecería artesanal con ediciones limitadas estacionales."
-    },
-    { 
-      id: 13, 
-      category: "etiquetas", 
-      title: "Organic Food Line", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Línea completa de etiquetas para productos orgánicos con enfoque en transparencia y sostenibilidad."
-    },
-    { 
-      id: 14, 
-      category: "etiquetas", 
-      title: "Luxury Packaging", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Etiquetas y packaging para línea de productos de lujo con acabados metálicos y relieve."
-    },
-    { 
-      id: 15, 
-      category: "etiquetas", 
-      title: "Seasonal Collection", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Colección de etiquetas estacionales para productos de edición limitada con motivos festivos."
-    },
-    { 
-      id: 16, 
-      category: "etiquetas", 
-      title: "Minimalist Series", 
-      image: "/placeholder.svg?height=400&width=600",
-      description: "Serie de etiquetas minimalistas para marca de estilo de vida contemporáneo y elegante."
-    },
-  ];
+];

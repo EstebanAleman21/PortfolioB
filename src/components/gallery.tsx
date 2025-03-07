@@ -66,7 +66,11 @@ export default function Gallery() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
               <div className="p-4 w-full">
                 <h4 className="text-white font-medium text-lg">{project.title}</h4>
-                <Button variant="link" className="text-pastel-pink p-0 h-auto">
+                <Button 
+                              variant="link" 
+                              className="text-pastel-pink p-0 h-auto"
+                              onClick={() => navigate(`/project/${project.id}`)}
+                            >
                   Ver Detalles
                 </Button>
               </div>
