@@ -61,7 +61,7 @@ export const projects: Project[] = [
     { 
       id: 1, 
       category: "posters", 
-      title: "Ejemplo de publicidad Labubu", 
+      title: "Poster de Labubu", 
       image: posterLabubu,
       images: [],
       description: "Campaña publicitaria para Labubu, con un diseño innovador que busca incrementar el reconocimiento de la marca y aumentar seguidores en Instagram a través de contenido visual creativo.",
