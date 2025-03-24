@@ -27,6 +27,15 @@ import PostPerros4 from "../assets/imagenes/PostIGPerros/4.png";
 import paradoja1 from "../assets/imagenes/PublicidadParadoja/1.png";
 import paradoja2 from "../assets/imagenes/PublicidadParadoja/2.png";
 import paradoja3 from "../assets/imagenes/PublicidadParadoja/3.png";
+import Catalogo1 from "../assets/imagenes/CatalogoLampara/Catalogo1.png";
+import Catalogo2 from "../assets/imagenes/CatalogoLampara/Catalogo2.png";
+import Catalogo3 from "../assets/imagenes/CatalogoLampara/Catalogo3.png";
+import Catalogo4 from "../assets/imagenes/CatalogoLampara/Catalogo4.png";
+import Catalogo5 from "../assets/imagenes/CatalogoLampara/Catalogo5.png";
+import Catalogo6 from "../assets/imagenes/CatalogoLampara/Catalogo6.png";
+import Catalogo7 from "../assets/imagenes/CatalogoLampara/Catalogo7.png";
+import Catalogo8 from "../assets/imagenes/CatalogoLampara/Catalogo8.png";
+import Catalogo9 from "../assets/imagenes/CatalogoLampara/Catalogo9.png";
 
 // Define types for better type safety
 export interface Category {
@@ -216,5 +225,26 @@ export const projects: Project[] = [
       client: "Paradoja",
       year: "2025",
       services: ["Diseño Gráfico", "Estrategia de Contenido", "Producto"]
+    },
+    { 
+      id: 12, 
+      category: "digital", 
+      title: "Propuesta de catalogo de productos: LamparaYa", 
+      image: Catalogo1,
+      images: [
+        Catalogo1,
+        Catalogo2,
+        Catalogo3,
+        Catalogo4,
+        Catalogo5,
+        Catalogo6,
+        Catalogo7,
+        Catalogo8,
+        Catalogo9,
+      ],
+      description: "Propuesta de catálogo de lámparas que fusiona diseño innovador y elegancia, destacando piezas únicas para iluminar y transformar cualquier espacio.",
+      client: "LamparaYa",
+      year: "2025",
+      services: ["Diseño Gráfico", "Catalogo", "Producto"]
     },
 ];
